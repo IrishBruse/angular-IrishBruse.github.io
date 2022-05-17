@@ -1,0 +1,7 @@
+.nav-link {
+    @apply px-3 py-1 rounded-lg mx-4;
+}
+
+.nav-link:hover {
+    @apply bg-input text-green;
+}
