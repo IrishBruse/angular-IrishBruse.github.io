@@ -1,0 +1,33 @@
+@import url('keen-slider/keen-slider.css');
+
+.dot {
+   @apply outline-none border-none w-3 h-3 bg-input rounded-full mx-1 cursor-pointer;
+}
+
+.dot.active {
+    @apply bg-green;
+}
+
+.dot:hover {
+    @apply bg-dark-green;
+}
+
+.arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    fill: #fff;
+    cursor: pointer;
+}
+
+.arrow--left {
+    left: -1.25rem;
+}
+
+.arrow--right {
+    left: auto;
+    right: -1.25rem;
+}

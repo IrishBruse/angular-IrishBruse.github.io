@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-    selector: 'ErrorPage',
-    templateUrl: './error.page.html',
+    selector: 'error',
+    templateUrl: './error.component.html',
+    styleUrls: ['./error.component.scss']
 })
 export class ErrorPage implements OnInit {
 
@@ -11,4 +11,5 @@ export class ErrorPage implements OnInit {
 
     ngOnInit(): void {
     }
+
 }
