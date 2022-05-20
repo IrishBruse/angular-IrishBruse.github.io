@@ -1,0 +1,30 @@
+<div *ngIf="user!==undefined" class="flex flex-wrap justify-center">
+    <div class="self-center">
+        <img class="rounded-full border-4 border-solid border-gray w-40" [src]="user.avatar_url" alt="">
+    </div>
+    <div class="self-center mx-4 p-4">
+        <a class="text-4xl" [href]="user.html_url">{{user.name}}</a>
+        <span class="flex justify-around">
+            <p>{{user.followers}} followers</p>
+            <p>{{user.following}} following</p>
+        </span>
+    </div>
+</div>
+
+<div class="h-12"></div>
+
+<div class="markdown" markdown src="https://raw.githubusercontent.com/IrishBruse/IrishBruse/main/README.md"></div>
+
+<div class="h-12"></div>
+
+<h1 class="text-center">Repos</h1>
+
+<div class="flex flex-wrap justify-center">
+    <div class="self-center border-2 border-solid border-light-gray p-2 m-4 rounded-xl w-full md:w-2/5" *ngFor="let repo of repos">
+        <span class="flex justify-between">
+            <a class="text-xl self-center" [href]="repo.html_url">{{repo.name}}</a>
+            <h4 *ngIf="repo.stargazers_count>0">{{repo.stargazers_count}} ⭐</h4>
+        </span>
+        <h4 class="">{{repo.description}}</h4>
+    </div>
+</div>

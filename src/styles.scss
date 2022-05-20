@@ -25,6 +25,14 @@ a:hover {
     @apply text-link-hover;
 }
 
+p{
+    @apply m-4;
+}
+
+th{
+    @apply px-2;
+}
+
 .router-link-active {
     @apply underline;
 }
@@ -39,4 +47,24 @@ h2 {
 
 h3 {
     font-size: 1.17em;
+}
+
+table[align="center"]{
+    @apply my-12;
+}
+
+table[align="center"],
+p[align="center"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+
+a>img:hover{
+    @apply bg-input;
+}
+
+a>img{
+    @apply mx-2;
 }
