@@ -25,11 +25,7 @@ a:hover {
     @apply text-link-hover;
 }
 
-p{
-    @apply m-4;
-}
-
-th{
+th {
     @apply px-2;
 }
 
@@ -49,7 +45,7 @@ h3 {
     font-size: 1.17em;
 }
 
-table[align="center"]{
+table[align="center"] {
     @apply my-12;
 }
 
@@ -59,12 +55,13 @@ p[align="center"] {
     flex-direction: row;
     justify-content: center;
     align-self: center;
+    margin: 1rem;
 }
 
-a>img:hover{
+a > img:hover {
     @apply bg-input;
 }
 
-a>img{
+a > img {
     @apply mx-2;
 }

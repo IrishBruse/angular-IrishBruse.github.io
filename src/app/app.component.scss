@@ -1,3 +1,7 @@
 .page {
     @apply bg-dark-gray px-6 md:mx-auto md:w-3/4;
 }
+
+.page:nth-child(1) {
+    @apply h-screen bg-test;
+}

@@ -1,6 +1,6 @@
 <div *ngIf="user!==undefined" class="flex flex-wrap justify-center">
     <div class="self-center">
-        <img class="rounded-full border-4 border-solid border-gray w-40" [src]="user.avatar_url" alt="">
+        <img class="rounded-full border-4 border-solid border-gray w-32 crisp" [src]="user.avatar_url" alt="">
     </div>
     <div class="self-center mx-4 p-4">
         <a class="text-4xl" [href]="user.html_url">{{user.name}}</a>

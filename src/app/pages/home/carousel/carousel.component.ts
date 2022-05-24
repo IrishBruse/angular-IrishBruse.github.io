@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Octokit } from '@octokit/rest';
 import KeenSlider, { KeenSliderInstance } from "keen-slider";
+import { ProjectsService } from 'src/app/services/projects.service';
+import { Project } from 'src/types';
 
 @Component({
     selector: 'carousel',
@@ -13,6 +14,14 @@ export class CarouselComponent {
     currentSlide: number = 2;
     dotHelper: Array<Number> = [];
     slider!: KeenSliderInstance;
+
+    featured: Project[] = [];
+
+    constructor(private projectService: ProjectsService) {
+        this.projectService.getFeatured().subscribe(data => {
+            this.featured = data;
+        })
+    }
 
     ngAfterViewInit() {
         setTimeout(() => {

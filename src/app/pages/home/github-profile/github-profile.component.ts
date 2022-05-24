@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Octokit } from '@octokit/rest';
-import { Endpoints, GetResponseDataTypeFromEndpointMethod } from '@octokit/types';
+import { Endpoints } from '@octokit/types';
 
 type UsersResponse = Endpoints['GET /users/{username}']["response"]["data"];
 
@@ -28,7 +28,5 @@ export class GithubProfileComponent implements OnInit {
         this.repos = (await this.octokit.repos.listForUser({ username: username })).data;
         this.repos = this.repos.filter((r: any) => r.fork === false && !this.filterRepos.includes(r.name));
         this.repos = this.repos.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
-        console.log(this.repos);
-
     }
 }

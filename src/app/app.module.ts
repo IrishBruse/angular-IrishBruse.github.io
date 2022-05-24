@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { GithubProfileComponent } from './components/github-profile/github-profile.component';
+import { CarouselComponent } from './pages/home/carousel/carousel.component';
+import { GithubProfileComponent } from './pages/home/github-profile/github-profile.component';
 
 // Pages
 import { HomePage } from './pages/home/home.component';
@@ -17,6 +17,8 @@ import { ProjectsPage } from './pages/projects/projects.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './pages/home/about/about.component';
+import { ProjectPage } from './pages/projects/project/project.component';
+import { GridComponent } from './pages/projects/grid/grid.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +31,8 @@ import { AboutComponent } from './pages/home/about/about.component';
         ProjectsPage,
         ErrorPage,
         AboutComponent,
+        ProjectPage,
+        GridComponent,
     ],
     imports: [
         BrowserModule,
