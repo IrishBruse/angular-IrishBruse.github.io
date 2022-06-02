@@ -3,7 +3,7 @@
 <h1 *ngIf="projects===undefined" class="text-center">Loading Projects...</h1>
 <div *ngIf="projects!==undefined" class="flex flex-wrap">
     <div *ngFor="let project of projects" class="w-full md:w-1/3 lg:w-1/4">
-        <div [routerLink]="project.title" routerLinkActive="router-link-active" class="rounded-xl m-2 bg-light-gray hover:scale-105 transition-transform cursor-pointer">
+        <div [routerLink]="project.title" routerLinkActive="router-link-active" class="rounded-xl m-2 bg-light-gray hover">
             <img class="p-0 m-0 rounded-xl w-full h-full aspect-video" src="assets/{{project.title}}/Thumbnail.png">
         </div>
         <div class="flex justify-between mx-3">

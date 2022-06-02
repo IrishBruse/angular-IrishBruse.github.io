@@ -1,1 +1,5 @@
-<p>image-viewer works!</p>
+<div class="flex flex-wrap justify-center my-8">
+    <div class="px-4 w-1/3" *ngFor="let screenshot of screenshots">
+        <img class="hover" [src]="'assets/' + project + '/' + screenshot" (click)="open($event.target)">
+    </div>
+</div>

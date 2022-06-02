@@ -20,6 +20,7 @@ import { AboutPage } from './pages/home/about/about.component';
 import { ProjectPage } from './pages/projects/project/project.component';
 import { GridPage } from './pages/projects/grid/grid.component';
 import { ImageViewerComponent } from './components/image-viewer/image-viewer.component';
+import { LicensesPage } from './pages/licenses/licenses.component';
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { ImageViewerComponent } from './components/image-viewer/image-viewer.com
         ProjectPage,
         GridPage,
         ImageViewerComponent,
+        LicensesPage,
     ],
     imports: [
         BrowserModule,
