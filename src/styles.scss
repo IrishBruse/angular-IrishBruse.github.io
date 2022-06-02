@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "scrollbar.scss";
+
 html {
     height: 100%;
     font-family: Roboto, sans-serif;
@@ -18,19 +20,11 @@ html * {
 }
 
 a {
-    @apply text-green;
-}
-
-a:hover {
-    @apply text-link-hover;
-}
-
-th {
-    @apply px-2;
+    @apply text-green hover:text-link-hover;
 }
 
 .router-link-active {
-    @apply underline;
+    @apply underline underline-offset-4;
 }
 
 h1 {
@@ -45,23 +39,37 @@ h3 {
     font-size: 1.17em;
 }
 
-table[align="center"] {
-    @apply my-12;
+.markdown {
+    img {
+        @apply mx-2 hover:bg-input;
+    }
+
+    p {
+        @apply items-center;
+    }
+
+    table[align="center"] {
+        @apply my-12;
+    }
+
+    table[align="center"],
+    p[align="center"] {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        margin: 1rem;
+    }
+
+    th {
+        @apply px-2;
+    }
 }
 
-table[align="center"],
-p[align="center"] {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-self: center;
-    margin: 1rem;
+.spacer {
+    @apply md:h-16 h-6;
 }
 
-a > img:hover {
-    @apply bg-input;
-}
-
-a > img {
-    @apply mx-2;
+button {
+    @apply bg-green text-gray font-bold px-4 py-2 rounded-xl shadow-md transform active:scale-100 hover:scale-110;
 }

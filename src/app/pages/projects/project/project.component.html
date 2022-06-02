@@ -1,3 +1,14 @@
-<time title="{{localDate}}" [dateTime]="localDate" class="float-right">{{ localDate.toLocaleDateString() }}</time>
+<h1 class="text-center font-bold hy-4 my-4">{{project.title}}</h1>
 
-<div class="markdown" markdown src="{{markdown}}"></div>
+<div class="flex justify-between md:flex-row flex-col w-full mx-auto">
+    <div class="aspect-video md:w-1/2">
+        <iframe *ngIf="project.video" class="bg-light-gray rounded-xl w-full aspect-video" [src]="safeVideoUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <img *ngIf="!project.video" class="bg-light-gray rounded-xl" [src]="thumbnail" [alt]="project.title +' Thumbnail'">
+    </div>
+
+    <div class="markdown text-2xl md:w-1/2 px-4 text-justify" markdown [src]="markdown"></div>
+</div>
+
+<div *ngIf="!launcher" class="flex justify-center my-4">
+    <button *ngIf="project.link" (click)="openButton()">{{project.linkText}}</button>
+</div>

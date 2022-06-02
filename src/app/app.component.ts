@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs';
+import { filter, firstValueFrom, lastValueFrom } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -12,21 +12,27 @@ export class AppComponent implements OnInit {
 
     title = "Ethan Conneely";
 
+    launcher: Boolean = false;
+
     constructor(
         private readonly router: Router,
         private activatedRoute: ActivatedRoute,
         private readonly titleService: Title
     ) { }
 
-    ngOnInit() {
+    async ngOnInit() {
         this.router.events.pipe(
             filter(event => event instanceof NavigationEnd),
         ).subscribe(() => {
             const rt = this.getChild(this.activatedRoute);
             rt.data.subscribe((data: any) => {
-                let newTitle = this.title + " - " + data.title;
+                let newTitle = data.title + " - " + this.title;
                 this.titleService.setTitle(newTitle)
             });
+        });
+
+        this.activatedRoute.queryParams.subscribe(async (params: any) => {
+            this.launcher = params.launcher
         });
     }
 

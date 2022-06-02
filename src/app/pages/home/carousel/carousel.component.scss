@@ -1,7 +1,7 @@
-@import url('keen-slider/keen-slider.css');
+@import url("keen-slider/keen-slider.css");
 
 .dot {
-   @apply outline-none border-none w-3 h-3 bg-input rounded-full mx-1 cursor-pointer;
+    @apply outline-none border-none w-3 h-3 bg-input rounded-full mx-1 cursor-pointer p-0;
 }
 
 .dot.active {

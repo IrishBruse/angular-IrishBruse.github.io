@@ -1,4 +1,14 @@
-<div class="h-16 bg-light-gray text-xl flex items-center justify-center drop-shadow-lg">
-    <a class="nav-link" routerLink='/home' routerLinkActive="router-link-active">Home</a>
-    <a class="nav-link" routerLink='/projects' routerLinkActive="router-link-active">Projects</a>
+<div class="h-16 bg-light-gray text-xl flex items-center drop-shadow-lg">
+    <div class="justify-start w-24 h-full">
+        <a routerLink='/home' routerLinkActive="router-link-active">
+            <img class="mx-auto h-full filter hover:brightness-125" src="favicon.ico" alt="">
+        </a>
+    </div>
+
+    <div class="flex flex-grow items-center justify-center">
+        <a class="nav-link" routerLink='/home' routerLinkActive="router-link-active">Home</a>
+        <a class="nav-link" routerLink='/projects' routerLinkActive="router-link-active">Projects</a>
+    </div>
+
+    <div class="justify-end w-24 h-full"> </div>
 </div>

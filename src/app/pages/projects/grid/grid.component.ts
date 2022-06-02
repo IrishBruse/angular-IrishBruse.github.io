@@ -1,26 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectsService } from 'src/app/services/projects.service';
 import { Project } from 'src/types';
+
+import Projects from 'src/assets/projects.json';
 
 @Component({
     selector: 'projects-grid',
     templateUrl: './grid.component.html',
     styleUrls: ['./grid.component.scss']
 })
-export class GridComponent implements OnInit {
+export class GridPage {
 
     projects: Project[] | undefined;
 
-    constructor(private projectsService: ProjectsService) { }
+    constructor() { }
+
+
 
     ngOnInit(): void {
-        this.projectsService.getProjects().subscribe(data => {
-            this.projects = data;
-
-            this.projects.forEach(project => {
-                let re = / /gi;
-                project.url = project.title.replace(re, '_');
-            });
-        });
+        this.projects = Projects as Project[];
     }
 }

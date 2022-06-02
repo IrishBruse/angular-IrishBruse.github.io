@@ -16,9 +16,10 @@ import { ProjectsPage } from './pages/projects/projects.component';
 // External imports
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { AboutComponent } from './pages/home/about/about.component';
+import { AboutPage } from './pages/home/about/about.component';
 import { ProjectPage } from './pages/projects/project/project.component';
-import { GridComponent } from './pages/projects/grid/grid.component';
+import { GridPage } from './pages/projects/grid/grid.component';
+import { ImageViewerComponent } from './components/image-viewer/image-viewer.component';
 
 @NgModule({
     declarations: [
@@ -30,9 +31,10 @@ import { GridComponent } from './pages/projects/grid/grid.component';
         HomePage,
         ProjectsPage,
         ErrorPage,
-        AboutComponent,
+        AboutPage,
         ProjectPage,
-        GridComponent,
+        GridPage,
+        ImageViewerComponent,
     ],
     imports: [
         BrowserModule,

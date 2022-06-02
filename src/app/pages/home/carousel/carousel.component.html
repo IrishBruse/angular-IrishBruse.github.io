@@ -1,7 +1,7 @@
 <div class="relative mx-auto w-4/5">
-    <div class="keen-slider keen-slider--vertical" #sliderRef>
-        <div [routerLink]="['/projects/'+item.title]" class="rounded-lg keen-slider__slide p-2 cursor-pointer" *ngFor="let item of featured">
-            <img class=" rounded-lg w-full h-full bg-light-gray" src="assets/{{item.title}}/Thumbnail.png">
+    <div class="keen-slider keen-slider--vertical aspect-video" #sliderRef>
+        <div [routerLink]="['/projects/'+item.title]" class="rounded-lg keen-slider__slide p-2 cursor-pointer hidden" *ngFor="let item of featured">
+            <img class="rounded-lg w-full h-full bg-light-gray" src="assets/{{item.title}}/Thumbnail.png">
         </div>
     </div>
     <svg class="bg-gray m-2 p-2 hover:bg-input rounded-full arrow arrow-left md:block hidden" (click)="slider.prev()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

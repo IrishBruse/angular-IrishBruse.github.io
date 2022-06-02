@@ -1,0 +1,12 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    @apply w-3;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-white rounded-2xl;
+}

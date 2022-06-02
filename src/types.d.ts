@@ -1,8 +1,8 @@
 export class Project {
-    date: Date;
-    featured?: boolean;
     title: string;
+    link?: string;
+    linkText?: string;
+    featured: boolean;
     type: string;
     video?: string;
-    url: string;
 }

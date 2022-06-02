@@ -3,23 +3,23 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProjectPage } from './project.component';
 
 describe('ProjectComponent', () => {
-  let component: ProjectPage;
-  let fixture: ComponentFixture<ProjectPage>;
+    let component: ProjectPage;
+    let fixture: ComponentFixture<ProjectPage>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ProjectPage]
-    })
-      .compileComponents();
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [ProjectPage]
+        })
+            .compileComponents();
+    });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ProjectPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(ProjectPage);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

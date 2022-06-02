@@ -1,7 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import KeenSlider, { KeenSliderInstance } from "keen-slider";
-import { ProjectsService } from 'src/app/services/projects.service';
 import { Project } from 'src/types';
+
+import Projects from 'src/assets/projects.json';
 
 @Component({
     selector: 'carousel',
@@ -17,15 +18,20 @@ export class CarouselComponent {
 
     featured: Project[] = [];
 
-    constructor(private projectService: ProjectsService) {
-        this.projectService.getFeatured().subscribe(data => {
-            this.featured = data;
-        })
+    constructor() {
+        this.featured = Projects.filter(project => project.featured) as Project[];
     }
 
     ngAfterViewInit() {
         setTimeout(() => {
             this.slider = new KeenSlider(this.sliderRef.nativeElement, {
+                created: () => {
+                    document.querySelectorAll(".keen-slider__slide").forEach(
+                        (slide: Element) => {
+                            slide.classList.remove("hidden");
+                        }
+                    )
+                },
                 loop: true,
                 initial: this.currentSlide,
                 slideChanged: (s) => {
