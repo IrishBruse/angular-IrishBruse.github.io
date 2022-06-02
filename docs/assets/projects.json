@@ -1,0 +1,48 @@
+[
+    {
+        "featured": true,
+        "link": "https://github.com/IrishBruse/Launcher/releases/latest",
+        "linkText": "Download",
+        "title": "Launcher",
+        "type": "Software"
+    },
+    {
+        "featured": true,
+        "title": "LDtkMonogame",
+        "type": "Library"
+    },
+    {
+        "featured": true,
+        "title": "Monoboy",
+        "type": "Software",
+        "video": "DBEnB1jmrCw"
+    },
+    {
+        "featured": true,
+        "title": "Tv Show App",
+        "type": "App"
+    },
+    {
+        "featured": true,
+        "title": "HyperHop",
+        "type": "App",
+        "video": "43nXqXdOAu4"
+    },
+    {
+        "featured": false,
+        "link": "https://itch.io/embed-upload/4341511?color=DFF6F5",
+        "linkText": "Play",
+        "title": "Island Strike",
+        "type": "Game"
+    },
+    {
+        "featured": false,
+        "title": "Planetarium",
+        "type": "Game"
+    },
+    {
+        "featured": false,
+        "title": "Space Blast",
+        "type": "Game"
+    }
+]
