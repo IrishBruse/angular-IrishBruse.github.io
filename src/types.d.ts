@@ -3,6 +3,7 @@ export class Project {
     link?: string;
     linkText?: string;
     featured: boolean;
+    launcherOnly?: boolean;
     type: string;
     video?: string;
 }

@@ -44,5 +44,11 @@
         "featured": false,
         "title": "Space Blast",
         "type": "Game"
+    },
+    {
+        "featured": false,
+        "title": "CSharp Utilities",
+        "type": "Extension",
+        "launcherOnly": true
     }
 ]
